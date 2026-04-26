@@ -1,3 +1,3 @@
-#! C:/Users/yef05096/AppData/Local/Python/pythoncore-3.14-64/python.exe
+#! /usr/bin/env python3
 # Purpose: Say hello
 print('Hello, World!')
