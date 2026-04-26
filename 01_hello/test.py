@@ -2,6 +2,7 @@
 """tests for hello.py"""
 
 import os
+import sys
 from subprocess import getstatusoutput, getoutput
 
 prg = './hello.py'
@@ -26,7 +27,11 @@ def test_runnable():
 def test_executable():
     """Says 'Hello, World!' by default"""
 
-    out = getoutput(prg)
+    if os.name == "nt":  # Windows
+        cmd = f"{sys.executable} {prg}"
+    else:
+        cmd = prg
+    out = getoutput(cmd)
     assert out.strip() == 'Hello, World!'
 
 
