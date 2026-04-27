@@ -40,7 +40,7 @@ def test_usage():
     """usage"""
 
     for flag in ['-h', '--help']:
-        rv, out = getstatusoutput(f'{prg} {flag}')
+        rv, out = getstatusoutput(f'python3 {prg} {flag}')
         assert rv == 0
         assert out.lower().startswith('usage')
 
@@ -51,6 +51,6 @@ def test_input():
 
     for val in ['Universe', 'Multiverse']:
         for option in ['-n', '--name']:
-            rv, out = getstatusoutput(f'{prg} {option} {val}')
+            rv, out = getstatusoutput(f'python3 {prg} {option} {val}')
             assert rv == 0
             assert out.strip() == f'Hello, {val}!'
