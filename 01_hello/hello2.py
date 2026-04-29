@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
 """
-Author : Anonymous <Anonymous@localhost>
-Date   : 2026-04-29
+Author : blagebo
 Purpose: Rock the Casbah
 """
 
