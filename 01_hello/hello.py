@@ -1,7 +1,7 @@
 #! /usr/bin/env python3
 """
 Author: blagebo
-Purpose: Say hello
+Purpose: Say hellooo
 """
 
 import argparse
