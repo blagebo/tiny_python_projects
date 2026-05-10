@@ -28,24 +28,16 @@ def main():
     """Make a jazz noise here"""
 
     args = get_args()
-    print(args)
     word = args.word
-    print(word)
-
-    """int_arg = args.int
-    file_arg = args.file
-    flag_arg = args.on
-    pos_arg = args.positional
-
-    print(f'str_arg = "{str_arg}"')
-    print(f'int_arg = "{int_arg}"')
-    print('file_arg = "{}"'.format(file_arg.name if file_arg else ''))
-    print(f'flag_arg = "{flag_arg}"')
-    print(f'positional = "{pos_arg}"')"""
-
-
-
-
+    article = ''
+    if word[0].lower() in 'aeiou':
+        article = 'an'
+    else:
+        article = 'a' 
+    #print('Ahoy, Captain, ' + article + ' ' + word + ' off the larboard bow!')
+    #print('Ahoy, Captain, {} {} off the larboard bow!'.format(article, word))
+    print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
+    
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
