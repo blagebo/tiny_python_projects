@@ -29,11 +29,14 @@ def main():
 
     args = get_args()
     word = args.word
-    article = ''
-    if word[0].lower() in 'aeiou':
-        article = 'an'
-    else:
-        article = 'a' 
+    
+    #article = ''
+    #if word[0].lower() in 'aeiou':
+    #    article = 'an'
+    #else:
+    #    article = 'a' 
+    article = 'an' if word[0].lower() in 'aeiou' else 'a'
+    
     #print('Ahoy, Captain, ' + article + ' ' + word + ' off the larboard bow!')
     #print('Ahoy, Captain, {} {} off the larboard bow!'.format(article, word))
     print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
