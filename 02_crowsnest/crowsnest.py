@@ -35,7 +35,7 @@ def main():
     #    article = 'an'
     #else:
     #    article = 'a' 
-    article = 'an' if word[0].lower() in 'aeiou' else 'a'
+    article = 'An' if word[0] in 'AEIOU' else 'an' if word[0] in 'aeiou' else 'a' if word[0]!=word[0].upper() else 'A'
     
     #print('Ahoy, Captain, ' + article + ' ' + word + ' off the larboard bow!')
     #print('Ahoy, Captain, {} {} off the larboard bow!'.format(article, word))
