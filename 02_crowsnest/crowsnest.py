@@ -20,6 +20,13 @@ def get_args():
                         metavar='str',
                         help='A word')
 
+    parser.add_argument('-s',
+                        '--side',
+                        help='A side string argument',
+                        metavar='str',
+                        type=str,
+                        default='larboard')
+    
     return parser.parse_args()
 
 
@@ -29,7 +36,8 @@ def main():
 
     args = get_args()
     word = args.word
-    
+    side = args.side
+    valid_side = ['larboard', 'starboard']
     #article = ''
     #if word[0].lower() in 'aeiou':
     #    article = 'an'
@@ -39,8 +47,14 @@ def main():
     
     #print('Ahoy, Captain, ' + article + ' ' + word + ' off the larboard bow!')
     #print('Ahoy, Captain, {} {} off the larboard bow!'.format(article, word))
-    print(f'Ahoy, Captain, {article} {word} off the larboard bow!')
     
+    if side in valid_side:
+        if word.isalpha():
+            print(f'Ahoy, Captain, {article} {word} off the {side} bow!')
+        else:
+            print('invalid word')
+    else:
+        print('invalid side')
 # --------------------------------------------------
 if __name__ == '__main__':
     main()
