@@ -24,8 +24,6 @@ def get_args():
     parser.add_argument('-s',
                         '--sorted',
                         help='Sort the items',
-                        metavar='bool',
-                        type=bool,
                         default=False)
 
     return parser.parse_args()
